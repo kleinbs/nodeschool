@@ -1,0 +1,23 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'version' ]
+2 info using npm@2.1.17
+3 info using node@v0.10.35
+4 verbose node symlink /usr/local/bin/node
+5 error version Bad package.json data undefined
+6 verbose type unexpected_token
+7 verbose stack SyntaxError: Unexpected token u
+7 verbose stack     at Object.parse (native)
+7 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:36:19
+7 verbose stack     at evalmachine.<anonymous>:208:20
+7 verbose stack     at OpenReq.Req.done (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:141:5)
+7 verbose stack     at OpenReq.done (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:61:22)
+7 verbose stack     at Object.oncomplete (evalmachine.<anonymous>:108:15)
+8 verbose cwd /Users/brianklein/nodeschool/stream-adventure
+9 error Darwin 14.3.0
+10 error argv "node" "/usr/local/bin/npm" "version"
+11 error node v0.10.35
+12 error npm  v2.1.17
+13 error Unexpected token u
+14 error If you need help, you may report this error at:
+14 error     <http://github.com/npm/npm/issues>
+15 verbose exit [ 1, true ]
