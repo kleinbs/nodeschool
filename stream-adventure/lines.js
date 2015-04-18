@@ -6,9 +6,7 @@ var flip = false;
 
 function write(buffer, encoding, next){
 
-	//this.push("upper " + buffer.toString().toUpperCase());
 	if(flip){
-		//console.log("upper")
 		this.push(buffer.toString().toUpperCase() + "\n");
 		flip = false;
 	} else {
