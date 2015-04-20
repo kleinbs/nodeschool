@@ -1,17 +1,24 @@
-var spawn = require('child_process').spawn;
 var duplex = require('duplexer2');
+var through = require('through2').obj;
 
 module.exports = function (counter) {
 
 	var countryCount = {}
+	var writeable = through(write, end);
 
-	var write = function(counter){
-		counter
+	return duplex(writeable, countryCount);
+
+	function write(buf, enc, next){
+		if(countryCount[buf.country] != undefined){
+			countryCount[buf.country] = 0
+		} else {
+			countryCount[buf.country] ++;
+		}
+		next();
 	}
 
-	console.log(counter);
-	console.log(process.stdin)
-    // return a duplex stream to count countries on the writable side
-    // and pass through `counter` on the readable side
-    duplex(process.stdout, counter);
-};
+	function end(done){
+		counter.setCounts(countryCount);
+		done();
+	}
+}
