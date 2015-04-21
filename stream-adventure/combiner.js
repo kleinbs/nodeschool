@@ -5,26 +5,19 @@ var zlib = require('zlib');
 
 module.exports = function () {
 
-	var genres
 	var genre;
-	var name;
 
-	function read(line, encoding, next){
+	function read(line, enc, next){
 		if(line.toString() !== ''){
 			var input = JSON.parse(line);
-			//console.log(line.toString());
 			if(input.type === 'genre'){
-				//console.log(input.name)
-				if(genres === undefined){
-					if(genre !== undefined)
-						genres = (JSON.stringify(genre)) + '\n';
-					genre = {name: input.name, books: []}
-				} 
-				else{
-					genres += (JSON.stringify(genre)) + '\n';
-					genre = {name: input.name, books: []}
+				if(genre){
+					//console.log(JSON.stringify(genre) + '\n');
+					this.push(JSON.stringify(genre) + '\n');
+					genre = {};
 				}
-			} 
+					genre = { name: input.name, books: []}
+			}  
 			else if(input.type === 'book'){
 				genre.books.push(input.name);
 			}	
@@ -33,12 +26,11 @@ module.exports = function () {
 	}
 
 	function end (done){
-		//console.log(genres);
-		//genres.forEach( function(genre){
-		return genres;
-		//});
+		if(genre){
+			this.push(JSON.stringify(genre) + '\n')
+		}
 		done();
 	}
 
-    return combine(split(), through(read, end), zlib.createGzip(genres))
+    return combine(split(), through(read, end), zlib.createGzip())
 }
