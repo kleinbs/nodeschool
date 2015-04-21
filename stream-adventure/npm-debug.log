@@ -1,0 +1,180 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'zlib' ]
+2 info using npm@2.8.3
+3 info using node@v0.10.35
+4 verbose node symlink /usr/local/bin/node
+5 verbose install initial load of /Users/brianklein/nodeschool/stream-adventure/package.json
+6 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/concat-stream/package.json
+7 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/duplexer/package.json
+8 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/duplexer2/package.json
+9 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/http/package.json
+10 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/request/package.json
+11 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/split/package.json
+12 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/stream-combiner/package.json
+13 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/tar/package.json
+14 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/through2/package.json
+15 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/trumpet/package.json
+16 verbose installManyTop reading scoped package data from /Users/brianklein/nodeschool/stream-adventure/node_modules/websocket-stream/package.json
+17 warn package.json http@0.0.0 http is also the name of a node core module.
+18 warn package.json http@0.0.0 No description
+19 warn package.json http@0.0.0 No repository field.
+20 warn package.json http@0.0.0 No README data
+21 verbose readDependencies loading dependencies from /Users/brianklein/nodeschool/stream-adventure/package.json
+22 silly cache add args [ 'zlib', null ]
+23 verbose cache add spec zlib
+24 silly cache add parsed spec { raw: 'zlib',
+24 silly cache add   scope: null,
+24 silly cache add   name: 'zlib',
+24 silly cache add   rawSpec: '',
+24 silly cache add   spec: '*',
+24 silly cache add   type: 'range' }
+25 silly addNamed zlib@*
+26 verbose addNamed "*" is a valid semver range for zlib
+27 silly addNameRange { name: 'zlib', range: '*', hasData: false }
+28 silly mapToRegistry name zlib
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry uri https://registry.npmjs.org/zlib
+32 verbose addNameRange registry:https://registry.npmjs.org/zlib not in flight; fetching
+33 verbose request uri https://registry.npmjs.org/zlib
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 14:17:07
+36 verbose request id 1ae68a407f692c2e
+37 http request GET https://registry.npmjs.org/zlib
+38 http 200 https://registry.npmjs.org/zlib
+39 silly get cb [ 200,
+39 silly get   { date: 'Tue, 21 Apr 2015 21:17:07 GMT',
+39 silly get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+39 silly get     etag: '"EBQNZSBGN9EL34IT3BLYCYHQA"',
+39 silly get     'content-type': 'application/json',
+39 silly get     'cache-control': 'max-age=60',
+39 silly get     'content-length': '6082',
+39 silly get     'accept-ranges': 'bytes',
+39 silly get     via: '1.1 varnish',
+39 silly get     age: '0',
+39 silly get     'x-served-by': 'cache-lax1420-LAX',
+39 silly get     'x-cache': 'HIT',
+39 silly get     'x-cache-hits': '1',
+39 silly get     'x-timer': 'S1429651027.508034,VS0,VE42',
+39 silly get     vary: 'Accept',
+39 silly get     'keep-alive': 'timeout=10, max=50',
+39 silly get     connection: 'Keep-Alive' } ]
+40 verbose get saving zlib to /Users/brianklein/.npm/registry.npmjs.org/zlib/.cache.json
+41 silly addNameRange number 2 { name: 'zlib', range: '*', hasData: true }
+42 silly addNameRange versions [ 'zlib',
+42 silly addNameRange   [ '1.0.0', '1.0.1', '1.0.2', '1.0.3', '1.0.4', '1.0.5' ] ]
+43 silly addNamed zlib@1.0.5
+44 verbose addNamed "1.0.5" is a plain semver version for zlib
+45 silly mapToRegistry name zlib
+46 silly mapToRegistry using default registry
+47 silly mapToRegistry registry https://registry.npmjs.org/
+48 silly mapToRegistry uri https://registry.npmjs.org/zlib
+49 verbose addRemoteTarball https://registry.npmjs.org/zlib/-/zlib-1.0.5.tgz not in flight; adding
+50 verbose addRemoteTarball [ 'https://registry.npmjs.org/zlib/-/zlib-1.0.5.tgz',
+50 verbose addRemoteTarball   '6e7c972fc371c645a6afb03ab14769def114fcc0' ]
+51 info retry fetch attempt 1 at 14:17:07
+52 info attempt registry request try #1 at 14:17:07
+53 http fetch GET https://registry.npmjs.org/zlib/-/zlib-1.0.5.tgz
+54 http fetch 200 https://registry.npmjs.org/zlib/-/zlib-1.0.5.tgz
+55 silly fetchAndShaCheck shasum 6e7c972fc371c645a6afb03ab14769def114fcc0
+56 verbose addTmpTarball /var/folders/nm/0y4gmj_91qq66pjngk1vzykw0000gq/T/npm-2073-990341c1/registry.npmjs.org/zlib/-/zlib-1.0.5.tgz not in flight; adding
+57 verbose addTmpTarball already have metadata; skipping unpack for zlib@1.0.5
+58 silly cache afterAdd zlib@1.0.5
+59 verbose afterAdd /Users/brianklein/.npm/zlib/1.0.5/package/package.json not in flight; writing
+60 verbose afterAdd /Users/brianklein/.npm/zlib/1.0.5/package/package.json written
+61 silly install resolved [ { name: 'zlib',
+61 silly install resolved     description: 'Simple, synchronous deflate/inflate for buffers',
+61 silly install resolved     version: '1.0.5',
+61 silly install resolved     homepage: 'https://github.com/kkaefer/node-zlib',
+61 silly install resolved     author: { name: 'Konstantin Käfer', email: 'kkaefer@gmail.com' },
+61 silly install resolved     repository: { type: 'git', url: 'git://github.com/kkaefer/node-zlib.git' },
+61 silly install resolved     engines: { node: '>=0.2.0' },
+61 silly install resolved     licenses: [ [Object] ],
+61 silly install resolved     main: './lib/zlib',
+61 silly install resolved     _npmJsonOpts:
+61 silly install resolved      { file: '/Users/kkaefer/.npm/zlib/1.0.5/package/package.json',
+61 silly install resolved        contributors: false,
+61 silly install resolved        serverjs: false,
+61 silly install resolved        wscript: true },
+61 silly install resolved     _id: 'zlib@1.0.5',
+61 silly install resolved     scripts: { preinstall: 'node-waf clean || true; node-waf configure build' },
+61 silly install resolved     dependencies: {},
+61 silly install resolved     devDependencies: {},
+61 silly install resolved     _engineSupported: true,
+61 silly install resolved     _npmVersion: '1.0.23',
+61 silly install resolved     _nodeVersion: 'v0.4.9',
+61 silly install resolved     _defaultsLoaded: true,
+61 silly install resolved     dist:
+61 silly install resolved      { shasum: '6e7c972fc371c645a6afb03ab14769def114fcc0',
+61 silly install resolved        tarball: 'http://registry.npmjs.org/zlib/-/zlib-1.0.5.tgz' },
+61 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+61 silly install resolved     directories: {},
+61 silly install resolved     _shasum: '6e7c972fc371c645a6afb03ab14769def114fcc0',
+61 silly install resolved     _resolved: 'https://registry.npmjs.org/zlib/-/zlib-1.0.5.tgz',
+61 silly install resolved     _from: 'zlib@*' } ]
+62 info install zlib@1.0.5 into /Users/brianklein/nodeschool/stream-adventure
+63 info installOne zlib@1.0.5
+64 verbose installOne of zlib to /Users/brianklein/nodeschool/stream-adventure not in flight; installing
+65 verbose lock using /Users/brianklein/.npm/_locks/zlib-f1353e1281216287.lock for /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib
+66 silly install write writing zlib 1.0.5 to /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib
+67 verbose unbuild node_modules/zlib
+68 silly gentlyRm /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib is being purged from base /Users/brianklein/nodeschool/stream-adventure
+69 verbose gentlyRm don't care about contents; nuking /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib
+70 verbose tar unpack /Users/brianklein/.npm/zlib/1.0.5/package.tgz
+71 verbose tar unpacking to /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib
+72 silly gentlyRm /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib is being purged
+73 verbose gentlyRm don't care about contents; nuking /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib
+74 silly gunzTarPerm modes [ '755', '644' ]
+75 silly gunzTarPerm extractEntry .gitignore
+76 silly gunzTarPerm extractEntry configure
+77 silly gunzTarPerm extractEntry index.js
+78 silly gunzTarPerm extractEntry LICENSE
+79 silly gunzTarPerm extractEntry Makefile
+80 silly gunzTarPerm extractEntry package.json
+81 silly gunzTarPerm extractEntry README.md
+82 silly gunzTarPerm extractEntry wscript
+83 silly gunzTarPerm extractEntry lib/zlib.js
+84 silly gunzTarPerm extractEntry src/node-zlib.cc
+85 silly gunzTarPerm extractEntry test/deflate.test.js
+86 silly gunzTarPerm extractEntry test/inflate.test.js
+87 verbose write writing to /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib/package.json
+88 info preinstall zlib@1.0.5
+89 verbose unsafe-perm in lifecycle true
+90 info zlib@1.0.5 Failed to exec preinstall script
+91 verbose unlock done using /Users/brianklein/.npm/_locks/zlib-f1353e1281216287.lock for /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib
+92 verbose stack Error: zlib@1.0.5 preinstall: `node-waf clean || true; node-waf configure build`
+92 verbose stack spawn ENOENT
+92 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:17:16)
+92 verbose stack     at ChildProcess.emit (events.js:98:17)
+92 verbose stack     at maybeClose (child_process.js:766:16)
+92 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:833:5)
+93 verbose pkgid zlib@1.0.5
+94 verbose cwd /Users/brianklein/nodeschool/stream-adventure
+95 error Darwin 14.3.0
+96 error argv "node" "/usr/local/bin/npm" "install" "zlib"
+97 error node v0.10.35
+98 error npm  v2.8.3
+99 error file sh
+100 error code ELIFECYCLE
+101 error errno ENOENT
+102 error syscall spawn
+103 error zlib@1.0.5 preinstall: `node-waf clean || true; node-waf configure build`
+103 error spawn ENOENT
+104 error Failed at the zlib@1.0.5 preinstall script 'node-waf clean || true; node-waf configure build'.
+104 error This is most likely a problem with the zlib package,
+104 error not with npm itself.
+104 error Tell the author that this fails on your system:
+104 error     node-waf clean || true; node-waf configure build
+104 error You can get their info via:
+104 error     npm owner ls zlib
+104 error There is likely additional logging output above.
+105 verbose exit [ 1, true ]
+106 verbose unbuild node_modules/zlib
+107 info preuninstall zlib@1.0.5
+108 info uninstall zlib@1.0.5
+109 verbose unbuild rmStuff zlib@1.0.5 from /Users/brianklein/nodeschool/stream-adventure/node_modules
+110 info postuninstall zlib@1.0.5
+111 silly gentlyRm /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib is being purged from base /Users/brianklein/nodeschool/stream-adventure
+112 verbose gentlyRm don't care about contents; nuking /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib
+113 silly vacuum-fs purging /Users/brianklein/nodeschool/stream-adventure/node_modules/zlib
+114 silly vacuum-fs quitting because other entries in /Users/brianklein/nodeschool/stream-adventure/node_modules
