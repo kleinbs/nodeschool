@@ -3,28 +3,42 @@ var through = require('through2');
 var split = require('split');
 var zlib = require('zlib');
 
-function isEmpty(obj){
-    return (Object.getOwnPropertyNames(obj).length === 0);
-}
-
 module.exports = function () {
 
-	var genres={};
+	var genres
+	var genre;
 	var name;
 
 	function read(line, encoding, next){
-		//if(!isEmpty(genres)){
+		if(line.toString() !== ''){
 			var input = JSON.parse(line);
-			console.log(line.type);
-			if(line.type === 'genre'){
-				console.log(line.name)
-			genres = {name: line.name, books: []}
-			} else if(line.type === 'book'){
-			genres.books.push(line.name);
-			}		
-		//}
+			//console.log(line.toString());
+			if(input.type === 'genre'){
+				//console.log(input.name)
+				if(genres === undefined){
+					if(genre !== undefined)
+						genres = (JSON.stringify(genre)) + '\n';
+					genre = {name: input.name, books: []}
+				} 
+				else{
+					genres += (JSON.stringify(genre)) + '\n';
+					genre = {name: input.name, books: []}
+				}
+			} 
+			else if(input.type === 'book'){
+				genre.books.push(input.name);
+			}	
+		}
 		next();
 	}
 
-    return combine(split(), through(read), zlib.createGzip())
+	function end (done){
+		//console.log(genres);
+		//genres.forEach( function(genre){
+		return genres;
+		//});
+		done();
+	}
+
+    return combine(split(), through(read, end), zlib.createGzip(genres))
 }
